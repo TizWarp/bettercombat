@@ -243,7 +243,7 @@ Details:
 [15:13:07] [Client thread/TRACE] [FML]: Recursing into package bettercombat/mod/network
 [15:13:07] [Client thread/TRACE] [FML]: Recursing into package bettercombat/mod/particle
 [15:13:07] [Client thread/TRACE] [FML]: Recursing into package bettercombat/mod/util
-[15:13:07] [Client thread/DEBUG] [FML]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (bettercombat.mod.util.BetterCombatMod) - loading
+[15:13:07] [Client thread/DEBUG] [FML]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (dev.tizwarp.util.mod.bettercombat.BetterCombatMod) - loading
 [15:13:07] [Client thread/TRACE] [FML]: Parsed dependency info for bettercombat: Requirements: [] After:[] Before:[]
 [15:13:07] [Client thread/DEBUG] [FML]: Examining file forge-1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12-recomp.jar for potential mods
 [15:13:07] [Client thread/DEBUG] [FML]: The mod container forge-1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12-recomp.jar appears to be missing an mcmod.info file
@@ -798,10 +798,10 @@ Caused by: java.lang.IllegalArgumentException
 [15:13:09] [Client thread/DEBUG] [FML]: Injected @EventBusSubscriber class bettercombat.mod.particle.ParticleSweep
 [15:13:09] [Client thread/DEBUG] [FML]: Registering @EventBusSubscriber for bettercombat.mod.util.BetterCombatPotions for mod bettercombat
 [15:13:09] [Client thread/DEBUG] [FML]: Injected @EventBusSubscriber class bettercombat.mod.util.BetterCombatPotions
-[15:13:09] [Client thread/DEBUG] [FML]: Registering @EventBusSubscriber for bettercombat.mod.enchantment.BetterCombatEnchantments for mod bettercombat
-[15:13:09] [Client thread/DEBUG] [FML]: Injected @EventBusSubscriber class bettercombat.mod.enchantment.BetterCombatEnchantments
-[15:13:09] [Client thread/DEBUG] [FML]: Registering @EventBusSubscriber for bettercombat.mod.util.BetterCombatMod for mod bettercombat
-[15:13:09] [Client thread/DEBUG] [FML]: Injected @EventBusSubscriber class bettercombat.mod.util.BetterCombatMod
+[15:13:09] [Client thread/DEBUG] [FML]: Registering @EventBusSubscriber for dev.tizwarp.enchantment.mod.bettercombat.BetterCombatEnchantments for mod bettercombat
+[15:13:09] [Client thread/DEBUG] [FML]: Injected @EventBusSubscriber class dev.tizwarp.enchantment.mod.bettercombat.BetterCombatEnchantments
+[15:13:09] [Client thread/DEBUG] [FML]: Registering @EventBusSubscriber for dev.tizwarp.util.mod.bettercombat.BetterCombatMod for mod bettercombat
+[15:13:09] [Client thread/DEBUG] [FML]: Injected @EventBusSubscriber class dev.tizwarp.util.mod.bettercombat.BetterCombatMod
 [15:13:09] [Client thread/DEBUG] [FML]: Attempting to inject @Config classes into bettercombat for type INSTANCE
 [15:13:09] [Client thread/TRACE] [FML]: Sent event FMLConstructionEvent to mod bettercombat
 [15:13:09] [Client thread/DEBUG] [FML]: Bar Step: Construction - Better Combat took 0.110s
@@ -2597,8 +2597,8 @@ Caused by: java.lang.IllegalArgumentException
 [15:13:29] [Server thread/TRACE] [FML]:   Registry: 8 minecraft:depth_strider net.minecraft.enchantment.EnchantmentWaterWalker@655621fd
 [15:13:29] [Server thread/TRACE] [FML]:   Registry: 9 minecraft:frost_walker net.minecraft.enchantment.EnchantmentFrostWalker@23f5008a
 [15:13:29] [Server thread/TRACE] [FML]:   Registry: 10 minecraft:binding_curse net.minecraft.enchantment.EnchantmentBindingCurse@6d420cdd
-[15:13:29] [Server thread/TRACE] [FML]:   Registry: 11 bettercombat:lightning bettercombat.mod.enchantment.EnchantmentLightning@247e1f35
-[15:13:29] [Server thread/TRACE] [FML]:   Registry: 12 bettercombat:gourmand bettercombat.mod.enchantment.EnchantmentGourmand@7a1b4074
+[15:13:29] [Server thread/TRACE] [FML]:   Registry: 11 bettercombat:lightning dev.tizwarp.enchantment.mod.bettercombat.EnchantmentLightning@247e1f35
+[15:13:29] [Server thread/TRACE] [FML]:   Registry: 12 bettercombat:gourmand dev.tizwarp.enchantment.mod.bettercombat.EnchantmentGourmand@7a1b4074
 [15:13:29] [Server thread/TRACE] [FML]:   Registry: 16 minecraft:sharpness net.minecraft.enchantment.EnchantmentDamage@300a38e7
 [15:13:29] [Server thread/TRACE] [FML]:   Registry: 17 minecraft:smite net.minecraft.enchantment.EnchantmentDamage@5c9a4f3b
 [15:13:29] [Server thread/TRACE] [FML]:   Registry: 18 minecraft:bane_of_arthropods net.minecraft.enchantment.EnchantmentDamage@2bb0e277
@@ -4632,8 +4632,8 @@ Caused by: java.lang.IllegalArgumentException
 [15:13:29] [Server thread/TRACE] [FML]:   Registry: 8 minecraft:depth_strider net.minecraft.enchantment.EnchantmentWaterWalker@655621fd
 [15:13:29] [Server thread/TRACE] [FML]:   Registry: 9 minecraft:frost_walker net.minecraft.enchantment.EnchantmentFrostWalker@23f5008a
 [15:13:29] [Server thread/TRACE] [FML]:   Registry: 10 minecraft:binding_curse net.minecraft.enchantment.EnchantmentBindingCurse@6d420cdd
-[15:13:29] [Server thread/TRACE] [FML]:   Registry: 11 bettercombat:lightning bettercombat.mod.enchantment.EnchantmentLightning@247e1f35
-[15:13:29] [Server thread/TRACE] [FML]:   Registry: 12 bettercombat:gourmand bettercombat.mod.enchantment.EnchantmentGourmand@7a1b4074
+[15:13:29] [Server thread/TRACE] [FML]:   Registry: 11 bettercombat:lightning dev.tizwarp.enchantment.mod.bettercombat.EnchantmentLightning@247e1f35
+[15:13:29] [Server thread/TRACE] [FML]:   Registry: 12 bettercombat:gourmand dev.tizwarp.enchantment.mod.bettercombat.EnchantmentGourmand@7a1b4074
 [15:13:29] [Server thread/TRACE] [FML]:   Registry: 16 minecraft:sharpness net.minecraft.enchantment.EnchantmentDamage@300a38e7
 [15:13:29] [Server thread/TRACE] [FML]:   Registry: 17 minecraft:smite net.minecraft.enchantment.EnchantmentDamage@5c9a4f3b
 [15:13:29] [Server thread/TRACE] [FML]:   Registry: 18 minecraft:bane_of_arthropods net.minecraft.enchantment.EnchantmentDamage@2bb0e277
@@ -5290,457 +5290,457 @@ Caused by: java.lang.IllegalArgumentException
 [15:13:36] [Client thread/DEBUG] [FML]: Overriding dimension: using 0
 [15:13:37] [Client thread/INFO] [STDOUT]: [bettercombat.mod.handler.EventHandlers:entityJoinWorldEvent:147]: EHC_INSTANCE.forceCheckItemstacksChanged()
 [15:13:37] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedOffhand:681]: net.minecraft.item.ItemAir@165d1d54  net.minecraft.item.ItemAir@165d1d54
-[15:13:37] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:913]: START
-[15:13:37] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:1082]: END
+[15:13:37] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:913]: START
+[15:13:37] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:1082]: END
 [15:13:37] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemAir@165d1d54  net.minecraft.item.ItemAir@165d1d54
-[15:13:37] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xtile.air@0
+[15:13:37] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xtile.air@0
 [15:13:38] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
 [15:13:38] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'Copy of Copy of New World'/overworld
 [15:13:38] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save Copy of Copy of New World
 [15:13:38] [Server thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedOffhand:681]: net.minecraft.item.ItemAir@165d1d54  net.minecraft.item.ItemAxe@323e026d
-[15:13:38] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:913]: START
-[15:13:38] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:989]: oh +oh AttributeModifier{amount=-3.200000047683716, operation=0, name='Tool modifier', id=fa233e1c-4180-4865-b01b-bcce9785aca3, serialize=true}   generic.attackSpeed
-[15:13:38] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:1082]: END
-[15:13:40] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:913]: START
-[15:13:40] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:989]: oh +oh AttributeModifier{amount=-3.200000047683716, operation=0, name='Tool modifier', id=fa233e1c-4180-4865-b01b-bcce9785aca3, serialize=true}   generic.attackSpeed
-[15:13:40] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:1082]: END
+[15:13:38] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:913]: START
+[15:13:38] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:989]: oh +oh AttributeModifier{amount=-3.200000047683716, operation=0, name='Tool modifier', id=fa233e1c-4180-4865-b01b-bcce9785aca3, serialize=true}   generic.attackSpeed
+[15:13:38] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:1082]: END
+[15:13:40] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:913]: START
+[15:13:40] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:989]: oh +oh AttributeModifier{amount=-3.200000047683716, operation=0, name='Tool modifier', id=fa233e1c-4180-4865-b01b-bcce9785aca3, serialize=true}   generic.attackSpeed
+[15:13:40] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:1082]: END
 [15:13:40] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:offhandAttack:994]: offhandAttack
 [15:13:41] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedOffhand:681]: net.minecraft.item.ItemAxe@323e026d  net.minecraft.item.ItemAir@165d1d54
-[15:13:41] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:913]: START
-[15:13:41] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:1082]: END
+[15:13:41] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:913]: START
+[15:13:41] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:1082]: END
 [15:13:41] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemAir@165d1d54  net.minecraft.item.ItemAxe@323e026d
-[15:13:41] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
-[15:13:41] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
-[15:13:42] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
-[15:13:42] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
+[15:13:41] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
+[15:13:41] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
+[15:13:42] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
+[15:13:42] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
 [15:13:42] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:13:42] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:13:42] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
-[15:13:43] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
-[15:13:43] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
+[15:13:42] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:13:42] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:13:43] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
+[15:13:43] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
 [15:13:43] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:13:43] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:13:43] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:13:43] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:13:43] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:13:44] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemAxe@323e026d  net.minecraft.item.ItemFood@3f6f9cef
-[15:13:44] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  6xitem.rottenFlesh@0
-[15:13:44] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
+[15:13:44] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  6xitem.rottenFlesh@0
+[15:13:44] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
 [15:13:45] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemFood@3f6f9cef  net.minecraft.item.ItemMonsterPlacer@7417ef4f
-[15:13:45] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.monsterPlacer@0
+[15:13:45] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.monsterPlacer@0
 [15:13:47] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemMonsterPlacer@7417ef4f  net.minecraft.item.ItemAxe@323e026d
-[15:13:47] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
-[15:13:47] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
-[15:13:48] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
-[15:13:48] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
+[15:13:47] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
+[15:13:47] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
+[15:13:48] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
+[15:13:48] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
 [15:13:48] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:13:48] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:13:48] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:13:48] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:13:48] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:13:48] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:13:49] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:13:49] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:13:49] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 7.0
-[15:13:49] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:13:49] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:13:49] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
-[15:13:50] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
-[15:13:50] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
+[15:13:49] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:13:49] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:13:49] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 7.0
+[15:13:49] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:13:49] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:13:49] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:13:50] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
+[15:13:50] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
 [15:13:51] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:13:51] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:13:51] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:13:51] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:13:51] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:13:51] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:13:51] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:13:51] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:13:51] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 7.0
-[15:13:51] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:13:51] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:13:51] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
-[15:13:53] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
-[15:13:53] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
+[15:13:51] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:13:51] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:13:51] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 7.0
+[15:13:51] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:13:51] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:13:51] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:13:53] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
+[15:13:53] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
 [15:13:53] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:13:53] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:13:53] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:13:53] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:13:53] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:13:53] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:13:53] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:13:53] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:13:53] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 7.0
+[15:13:53] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:13:53] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:13:53] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 7.0
 [15:13:53] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player678 has made the advancement [Monster Hunter]
-[15:13:53] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:13:53] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:13:53] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:13:53] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:13:53] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:13:53] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
 [15:13:53] [Client thread/INFO] [net.minecraft.client.gui.GuiNewChat]: [CHAT] Player678 has made the advancement [Monster Hunter]
 [15:13:53] [Client thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 10 advancements
-[15:13:55] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
-[15:13:55] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
+[15:13:55] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
+[15:13:55] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
 [15:13:55] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:13:55] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:13:55] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:13:55] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:13:55] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:13:55] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:13:55] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:13:55] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:13:55] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 7.0
-[15:13:55] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:13:55] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:13:55] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:13:55] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:13:55] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:13:55] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 7.0
+[15:13:55] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:13:55] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:13:55] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
 [15:13:57] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemAxe@323e026d  net.minecraft.item.ItemFood@3f6f9cef
-[15:13:57] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  7xitem.rottenFlesh@0
-[15:13:57] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
+[15:13:57] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  7xitem.rottenFlesh@0
+[15:13:57] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
 [15:13:57] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemFood@3f6f9cef  net.minecraft.item.ItemMonsterPlacer@7417ef4f
-[15:13:57] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.monsterPlacer@0
+[15:13:57] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.monsterPlacer@0
 [15:13:58] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemMonsterPlacer@7417ef4f  net.minecraft.item.ItemAxe@323e026d
-[15:13:58] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
-[15:13:58] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
-[15:14:00] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
-[15:14:00] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
+[15:13:58] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
+[15:13:58] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
+[15:14:00] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
+[15:14:00] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
 [15:14:00] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:14:00] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:14:00] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:14:00] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:14:00] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:14:00] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:14:00] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:14:00] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:14:00] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 7.0
-[15:14:00] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:14:00] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:14:00] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
-[15:14:02] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
-[15:14:02] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
+[15:14:00] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:14:00] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:14:00] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 7.0
+[15:14:00] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:14:00] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:14:00] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:14:02] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
+[15:14:02] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
 [15:14:02] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:14:02] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:14:02] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:14:02] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:14:02] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:14:02] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:14:02] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:14:02] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:14:02] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 7.0
-[15:14:02] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:14:02] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:14:02] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
-[15:14:04] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
-[15:14:04] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
+[15:14:02] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:14:02] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:14:02] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 7.0
+[15:14:02] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:14:02] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:14:02] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:14:04] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
+[15:14:04] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
 [15:14:04] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:14:04] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:14:04] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:14:04] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:14:04] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:14:04] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:14:04] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:14:04] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:14:04] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 7.0
-[15:14:04] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:14:04] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:14:04] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:14:04] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:14:04] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:14:04] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 7.0
+[15:14:04] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:14:04] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:14:04] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
 [15:14:07] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
 [15:14:07] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'Copy of Copy of New World'/overworld
 [15:14:07] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save Copy of Copy of New World
-[15:16:17] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
-[15:16:17] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
+[15:16:17] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
+[15:16:17] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
 [15:16:17] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:16:17] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:16:17] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:16:17] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:16:17] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:16:25] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save Copy of Copy of New World
 [15:16:29] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemAxe@323e026d  net.minecraft.item.ItemHoe@46e388ec
-[15:16:29] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:29] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:29] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:29] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:16:32] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemHoe@46e388ec  net.minecraft.item.ItemAir@165d1d54
-[15:16:32] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xtile.air@0
-[15:16:32] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:32] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xtile.air@0
+[15:16:32] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:16:32] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemAir@165d1d54  net.minecraft.item.ItemAxe@323e026d
-[15:16:32] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
-[15:16:32] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
+[15:16:32] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
+[15:16:32] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
 [15:16:33] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemAxe@323e026d  net.minecraft.item.ItemHoe@46e388ec
-[15:16:33] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:33] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:33] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:33] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:16:33] [Server thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemHoe@46e388ec  net.minecraft.item.ItemAir@165d1d54
-[15:16:33] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xtile.air@0
-[15:16:33] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:33] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xtile.air@0
+[15:16:33] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:16:33] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedOffhand:681]: net.minecraft.item.ItemAir@165d1d54  net.minecraft.item.ItemHoe@46e388ec
-[15:16:33] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:913]: START
-[15:16:33] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:924]: oh +all 0.0 Weapon modifier fa233e1c-4180-4865-b01b-bcce9785aca3
-[15:16:33] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:989]: oh +oh AttributeModifier{amount=0.0, operation=0, name='Weapon modifier', id=fa233e1c-4180-4865-b01b-bcce9785aca3, serialize=true}   generic.attackSpeed
-[15:16:33] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:1082]: END
+[15:16:33] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:913]: START
+[15:16:33] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:924]: oh +all 0.0 Weapon modifier fa233e1c-4180-4865-b01b-bcce9785aca3
+[15:16:33] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:989]: oh +oh AttributeModifier{amount=0.0, operation=0, name='Weapon modifier', id=fa233e1c-4180-4865-b01b-bcce9785aca3, serialize=true}   generic.attackSpeed
+[15:16:33] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:1082]: END
 [15:16:34] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedOffhand:681]: net.minecraft.item.ItemHoe@46e388ec  net.minecraft.item.ItemAir@165d1d54
-[15:16:34] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:913]: START
-[15:16:34] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:1082]: END
+[15:16:34] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:913]: START
+[15:16:34] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:1082]: END
 [15:16:34] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemAir@165d1d54  net.minecraft.item.ItemHoe@46e388ec
-[15:16:34] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:34] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:34] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:34] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:16:34] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedOffhand:681]: net.minecraft.item.ItemAir@165d1d54  net.minecraft.item.ItemHoe@46e388ec
-[15:16:34] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:913]: START
-[15:16:34] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:924]: oh +all 0.0 Weapon modifier fa233e1c-4180-4865-b01b-bcce9785aca3
-[15:16:34] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:956]: oh -mh AttributeModifier{amount=0.0, operation=0, name='Weapon modifier', id=fa233e1c-4180-4865-b01b-bcce9785aca3, serialize=true}   generic.attackSpeed fa233e1c-4180-4865-b01b-bcce9785aca3
-[15:16:34] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:989]: oh +oh AttributeModifier{amount=0.0, operation=0, name='Weapon modifier', id=fa233e1c-4180-4865-b01b-bcce9785aca3, serialize=true}   generic.attackSpeed
-[15:16:34] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:1082]: END
+[15:16:34] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:913]: START
+[15:16:34] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:924]: oh +all 0.0 Weapon modifier fa233e1c-4180-4865-b01b-bcce9785aca3
+[15:16:34] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:956]: oh -mh AttributeModifier{amount=0.0, operation=0, name='Weapon modifier', id=fa233e1c-4180-4865-b01b-bcce9785aca3, serialize=true}   generic.attackSpeed fa233e1c-4180-4865-b01b-bcce9785aca3
+[15:16:34] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:989]: oh +oh AttributeModifier{amount=0.0, operation=0, name='Weapon modifier', id=fa233e1c-4180-4865-b01b-bcce9785aca3, serialize=true}   generic.attackSpeed
+[15:16:34] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:1082]: END
 [15:16:34] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemHoe@46e388ec  net.minecraft.item.ItemAir@165d1d54
-[15:16:34] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xtile.air@0
-[15:16:34] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
-[15:16:35] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xtile.air@0
+[15:16:34] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xtile.air@0
+[15:16:34] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:35] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xtile.air@0
 [15:16:36] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:16:36] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:16:36] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
-[15:16:36] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xtile.air@0
+[15:16:36] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:16:36] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:16:36] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xtile.air@0
 [15:16:36] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:16:36] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:16:36] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
-[15:16:38] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xtile.air@0
+[15:16:36] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:16:36] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:16:38] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xtile.air@0
 [15:16:38] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:16:38] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:16:38] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:16:38] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:16:38] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:16:39] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedOffhand:681]: net.minecraft.item.ItemHoe@46e388ec  net.minecraft.item.ItemAir@165d1d54
-[15:16:39] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:913]: START
-[15:16:39] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:1082]: END
+[15:16:39] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:913]: START
+[15:16:39] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:1082]: END
 [15:16:39] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemAir@165d1d54  net.minecraft.item.ItemHoe@46e388ec
-[15:16:39] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:39] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
-[15:16:39] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:39] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:39] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:39] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:39] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:39] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:16:39] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:16:39] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:16:39] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:16:39] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:16:39] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:16:40] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemHoe@46e388ec  net.minecraft.item.ItemAxe@323e026d
-[15:16:40] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
-[15:16:40] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
+[15:16:40] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hatchetWood@0
+[15:16:40] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
 [15:16:41] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedOffhand:681]: net.minecraft.item.ItemAir@165d1d54  net.minecraft.item.ItemAxe@323e026d
-[15:16:41] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:913]: START
-[15:16:41] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:924]: oh +all -3.200000047683716 Tool modifier fa233e1c-4180-4865-b01b-bcce9785aca3
-[15:16:41] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:956]: oh -mh AttributeModifier{amount=-3.200000047683716, operation=0, name='Tool modifier', id=fa233e1c-4180-4865-b01b-bcce9785aca3, serialize=true}   generic.attackSpeed fa233e1c-4180-4865-b01b-bcce9785aca3
-[15:16:41] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:989]: oh +oh AttributeModifier{amount=-3.200000047683716, operation=0, name='Tool modifier', id=fa233e1c-4180-4865-b01b-bcce9785aca3, serialize=true}   generic.attackSpeed
-[15:16:41] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:1082]: END
+[15:16:41] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:913]: START
+[15:16:41] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:924]: oh +all -3.200000047683716 Tool modifier fa233e1c-4180-4865-b01b-bcce9785aca3
+[15:16:41] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:956]: oh -mh AttributeModifier{amount=-3.200000047683716, operation=0, name='Tool modifier', id=fa233e1c-4180-4865-b01b-bcce9785aca3, serialize=true}   generic.attackSpeed fa233e1c-4180-4865-b01b-bcce9785aca3
+[15:16:41] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:989]: oh +oh AttributeModifier{amount=-3.200000047683716, operation=0, name='Tool modifier', id=fa233e1c-4180-4865-b01b-bcce9785aca3, serialize=true}   generic.attackSpeed
+[15:16:41] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:1082]: END
 [15:16:41] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemAxe@323e026d  net.minecraft.item.ItemAir@165d1d54
-[15:16:41] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xtile.air@0
-[15:16:41] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
+[15:16:41] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xtile.air@0
+[15:16:41] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -3.200000047683716 Tool modifier
 [15:16:42] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemAir@165d1d54  net.minecraft.item.ItemHoe@46e388ec
-[15:16:42] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:42] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
-[15:16:43] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:43] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:42] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:42] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:43] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:43] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:16:43] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:16:43] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:16:43] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:16:43] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:16:43] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:16:45] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemHoe@46e388ec  net.minecraft.item.ItemFood@3f6f9cef
-[15:16:45] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  8xitem.rottenFlesh@0
-[15:16:45] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
-[15:16:46] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  8xitem.rottenFlesh@0
+[15:16:45] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  8xitem.rottenFlesh@0
+[15:16:45] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:46] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  8xitem.rottenFlesh@0
 [15:16:46] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemFood@3f6f9cef  net.minecraft.item.ItemMonsterPlacer@7417ef4f
-[15:16:46] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.monsterPlacer@0
+[15:16:46] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.monsterPlacer@0
 [15:16:47] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemMonsterPlacer@7417ef4f  net.minecraft.item.ItemHoe@46e388ec
-[15:16:47] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:47] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
-[15:16:49] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:49] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:47] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:47] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:49] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:49] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:16:49] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:16:49] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:16:49] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:16:49] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:16:49] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:16:49] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:16:49] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:16:49] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:16:49] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
-[15:16:49] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:16:49] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:16:49] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:16:49] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:16:49] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:16:49] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
+[15:16:49] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:16:49] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:16:49] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
 [15:16:49] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemHoe@46e388ec  net.minecraft.item.ItemAir@165d1d54
-[15:16:49] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xtile.air@0
-[15:16:49] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
-[15:16:50] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:913]: START
-[15:16:50] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:989]: oh +oh AttributeModifier{amount=-3.200000047683716, operation=0, name='Tool modifier', id=fa233e1c-4180-4865-b01b-bcce9785aca3, serialize=true}   generic.attackSpeed
-[15:16:50] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getOffhandCooldown:1082]: END
+[15:16:49] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xtile.air@0
+[15:16:49] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:50] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:913]: START
+[15:16:50] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:989]: oh +oh AttributeModifier{amount=-3.200000047683716, operation=0, name='Tool modifier', id=fa233e1c-4180-4865-b01b-bcce9785aca3, serialize=true}   generic.attackSpeed
+[15:16:50] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getOffhandCooldown:1082]: END
 [15:16:50] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:offhandAttack:994]: offhandAttack
 [15:16:51] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemAir@165d1d54  net.minecraft.item.ItemHoe@46e388ec
-[15:16:51] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:51] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
-[15:16:53] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:53] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:51] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:51] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:53] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:53] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:16:53] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:16:53] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:16:53] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:16:53] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:16:53] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:16:53] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:16:53] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:16:53] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:16:53] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
-[15:16:53] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:16:53] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:16:53] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
-[15:16:54] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:54] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:53] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:16:53] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:16:53] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
+[15:16:53] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:16:53] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:16:53] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:16:54] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:54] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:16:54] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:16:54] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:16:54] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
-[15:16:54] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:54] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:54] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:16:54] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:16:54] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:54] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:16:54] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:16:54] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:16:54] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
-[15:16:55] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:55] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:54] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:16:54] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:16:55] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:55] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:16:55] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:16:55] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:16:55] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
-[15:16:55] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:55] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:55] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:16:55] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:16:55] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:55] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:16:55] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:16:55] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:16:55] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:16:55] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:16:55] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:16:55] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:16:55] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:16:55] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:16:55] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
-[15:16:55] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:16:55] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:16:55] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
-[15:16:56] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:56] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:55] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:16:55] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:16:55] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
+[15:16:55] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:16:55] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:16:55] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:16:56] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:56] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:16:56] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:16:56] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:16:56] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
-[15:16:56] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:56] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:56] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:16:56] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:16:56] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:56] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:16:57] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:16:57] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:16:57] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:16:57] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:16:57] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:16:57] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:16:57] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:16:57] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:16:57] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
-[15:16:57] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:16:57] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:16:57] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
-[15:16:58] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:58] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:57] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:16:57] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:16:57] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
+[15:16:57] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:16:57] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:16:57] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:16:58] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:58] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:16:58] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:16:58] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:16:58] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:16:58] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:16:58] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:16:58] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:16:58] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:16:58] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:16:58] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
-[15:16:58] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:16:58] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:16:58] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
-[15:16:59] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:59] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:58] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:16:58] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:16:58] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
+[15:16:58] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:16:58] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:16:58] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:16:59] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:59] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:16:59] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:16:59] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:16:59] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:16:59] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:16:59] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:16:59] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:16:59] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:16:59] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:16:59] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
-[15:16:59] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:16:59] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:16:59] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
-[15:16:59] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:16:59] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:59] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:16:59] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:16:59] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
+[15:16:59] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:16:59] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:16:59] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:16:59] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:16:59] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:16:59] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:16:59] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:16:59] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:16:59] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:16:59] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:16:59] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:16:59] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:16:59] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:16:59] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
-[15:16:59] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:16:59] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:16:59] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
-[15:17:00] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:17:00] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:16:59] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:16:59] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:16:59] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
+[15:16:59] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:16:59] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:16:59] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:17:00] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:17:00] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:17:00] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:17:00] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:17:00] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:17:00] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:17:00] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:17:00] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:17:00] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:17:00] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:17:00] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
-[15:17:00] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:17:00] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:17:00] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
-[15:17:00] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:17:00] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:17:00] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:17:00] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:17:00] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
+[15:17:00] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:17:00] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:17:00] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:17:00] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:17:00] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:17:00] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:17:00] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:17:00] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:17:00] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:17:00] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:17:00] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:17:00] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:17:00] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:17:00] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
-[15:17:00] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:17:00] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:17:00] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
-[15:17:01] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:17:01] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:17:00] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:17:00] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:17:00] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
+[15:17:00] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:17:00] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:17:00] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:17:01] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:17:01] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:17:01] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:17:01] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:17:01] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:17:01] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:17:01] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:17:01] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:17:01] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:17:01] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:17:01] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
-[15:17:01] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:17:01] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:17:01] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
-[15:17:01] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:17:01] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:17:01] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:17:01] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:17:01] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
+[15:17:01] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:17:01] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:17:01] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:17:01] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:17:01] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:17:01] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:17:01] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:17:01] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:17:01] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:17:01] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:17:01] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:17:01] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:17:01] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:17:01] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
-[15:17:01] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:17:01] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:17:01] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
-[15:17:01] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:17:01] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:17:01] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:17:01] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:17:01] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
+[15:17:01] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:17:01] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:17:01] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:17:01] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:17:01] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:17:02] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:17:02] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:17:02] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:17:02] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:17:02] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:17:02] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:17:02] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:17:02] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:17:02] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
-[15:17:02] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:17:02] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:17:02] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
-[15:17:02] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
-[15:17:02] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:17:02] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:17:02] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:17:02] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 1.0
+[15:17:02] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:17:02] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:17:02] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:17:02] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.hoeDiamond@0
+[15:17:02] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:17:02] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:17:02] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
-[15:17:02] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
+[15:17:02] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:17:02] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:swingNonMetalRight:1506]: swingNonMetalRight
 [15:17:03] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemHoe@46e388ec  net.minecraft.item.ItemAir@165d1d54
-[15:17:03] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xtile.air@0
-[15:17:03] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
+[15:17:03] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xtile.air@0
+[15:17:03] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all 0.0 Weapon modifier
 [15:17:06] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:checkItemstackChangedMainhand:623]: net.minecraft.item.ItemAir@165d1d54  net.minecraft.item.ItemSword@3f322610
-[15:17:06] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.swordIron@0
-[15:17:06] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -2.4000000953674316 Weapon modifier
-[15:17:06] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.swordIron@0
-[15:17:06] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -2.4000000953674316 Weapon modifier
+[15:17:06] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.swordIron@0
+[15:17:06] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -2.4000000953674316 Weapon modifier
+[15:17:06] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.swordIron@0
+[15:17:06] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -2.4000000953674316 Weapon modifier
 [15:17:06] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:17:06] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:17:06] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
 [15:17:06] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:17:07] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:17:07] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:17:07] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 6.0
-[15:17:07] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:17:07] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:17:07] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
-[15:17:07] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.swordIron@0
-[15:17:07] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -2.4000000953674316 Weapon modifier
+[15:17:07] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:17:07] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:17:07] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 6.0
+[15:17:07] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:17:07] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:17:07] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:17:07] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.swordIron@0
+[15:17:07] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -2.4000000953674316 Weapon modifier
 [15:17:07] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:17:07] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:17:07] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
 [15:17:07] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:17:07] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:17:07] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:17:07] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 6.0
-[15:17:07] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
-[15:17:07] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:429]: is ELB
-[15:17:07] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
-[15:17:07] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.swordIron@0
-[15:17:07] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -2.4000000953674316 Weapon modifier
+[15:17:07] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:17:07] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:17:07] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:199]: DAMAGE 6.0
+[15:17:07] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:425]: attackEntityFrom
+[15:17:07] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:429]: is ELB
+[15:17:07] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:433]: ATTACKED
+[15:17:07] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.swordIron@0
+[15:17:07] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -2.4000000953674316 Weapon modifier
 [15:17:07] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:17:07] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:17:07] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
 [15:17:07] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:17:07] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:17:07] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
-[15:17:08] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:691]:  1xitem.swordIron@0
-[15:17:08] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:getMainhandCooldown:700]: +all -2.4000000953674316 Weapon modifier
+[15:17:07] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:17:07] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:17:08] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:691]:  1xitem.swordIron@0
+[15:17:08] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:getMainhandCooldown:700]: +all -2.4000000953674316 Weapon modifier
 [15:17:08] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandSwingSound:975]: swingSoundRight
-[15:17:08] [Client thread/INFO] [STDOUT]: [bettercombat.mod.util.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
+[15:17:08] [Client thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.SoundHandler:playSwingSoundRight:513]: playSwingSoundRight
 [15:17:08] [Client thread/INFO] [STDOUT]: [bettercombat.mod.client.handler.EventHandlersClient:mainhandAttack:963]: ENTITY HIT
-[15:17:08] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictim:65]: playerAttackVictim
-[15:17:08] [Server thread/INFO] [STDOUT]: [bettercombat.mod.util.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
+[15:17:08] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictim:65]: playerAttackVictim
+[15:17:08] [Server thread/INFO] [STDOUT]: [dev.tizwarp.util.mod.bettercombat.Helpers:playerAttackVictimWithWeapon:134]: playerAttackVictimWithWeapon
 [15:17:10] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
 [15:17:10] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'Copy of Copy of New World'/overworld
 [15:17:10] [Server thread/DEBUG] [FML]: Gathering id map for writing to world save Copy of Copy of New World

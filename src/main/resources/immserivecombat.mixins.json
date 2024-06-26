@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "dev.tizwarp.immersivecombat.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.8",
+  "plugin": "dev.tizwarp.immersivecombat.core.MixinPlugin",
+  "mixins": [
+    "ZombieMixin"
+  ],
+  "injectors": {
+    "maxShiftBy": 10
+  }
+}
