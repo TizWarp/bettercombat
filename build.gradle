@@ -114,7 +114,7 @@ dependencies {
     annotationProcessor ('com.cleanroommc:sponge-mixin:0.18.5+mixin.0.8.5')
 
     implementation 'curse.maven:dodge-442962:3343308'
-    implementation "curse.maven:fermiumbooter-968474:5346592"
+    //implementation "curse.maven:fermiumbooter-968474:5346592"
     //runtimeOnly 'curse.maven:spartan-weaponry-278141:4467344'
 
 }
@@ -134,14 +134,14 @@ jar {
                 'Specification-Vendor': mod_authors,
                 'Specification-Version': '1', // We are version 1 of ourselves
                 'FMLCorePluginContainsFMLMod': true,
-                //'TweakClass': 'org.spongepowered.asm.launch.MixinTweaker',
+                'TweakClass': 'org.spongepowered.asm.launch.MixinTweaker',
                 'FMLCorePlugin': 'dev.tizwarp.immersivecombat.core.MixinLoader',
                 'ForceLoadAsMod': true,
                 'Implementation-Title': project.name,
                 'Implementation-Version': mod_version,
                 'Implementation-Vendor': mod_authors,
                 'Implementation-Timestamp': new Date().format('yyyy-MM-dd\'T\'HH:mm:ssZ'),
-                'MixinConfigs': "immersivecombat.mixins.json"
+                'MixinConfigs': 'immersivecombat.mixins.json'
         ])
     }
 }

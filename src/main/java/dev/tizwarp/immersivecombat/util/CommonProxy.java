@@ -1,5 +1,6 @@
 package dev.tizwarp.immersivecombat.util;
 
+import com.cleanroommc.hackery.Reflection;
 import dev.tizwarp.immersivecombat.network.PacketHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;

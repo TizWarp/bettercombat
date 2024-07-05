@@ -15,7 +15,7 @@ public class MixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public String getRefMapperConfig() {
-        return "";
+        return null;
     }
 
     @Override
@@ -30,7 +30,7 @@ public class MixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public List<String> getMixins() {
-        return List.of();
+        return null;
     }
 
     @Override

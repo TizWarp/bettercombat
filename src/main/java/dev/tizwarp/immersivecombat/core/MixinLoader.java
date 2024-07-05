@@ -1,8 +1,5 @@
 package dev.tizwarp.immersivecombat.core;
 
-
-import fermiumbooter.FermiumRegistryAPI;
-import fermiumbooter.mixin.FermiumMixinLoader;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 import org.checkerframework.checker.units.qual.A;
 import org.spongepowered.asm.launch.MixinBootstrap;
@@ -15,25 +12,24 @@ import java.util.List;
 import java.util.Map;
 
 @IFMLLoadingPlugin.Name("ImmersiveCombat-Mixin")
-public class MixinLoader implements IFMLLoadingPlugin, IEarlyMixinLoader{
-
+public class MixinLoader implements IFMLLoadingPlugin {
 
     @Nullable
     @Override
     public String[] getASMTransformerClass() {
-        return new String[0];
+        return null;
     }
 
     @Nullable
     @Override
     public String getModContainerClass() {
-        return "";
+        return null;
     }
 
     @Nullable
     @Override
     public String getSetupClass() {
-        return "";
+        return null;
     }
 
     @Override
@@ -44,13 +40,6 @@ public class MixinLoader implements IFMLLoadingPlugin, IEarlyMixinLoader{
     @Nullable
     @Override
     public String getAccessTransformerClass() {
-        return "";
-    }
-
-    @Override
-    public List<String> getMixinConfigs() {
-        ArrayList<String> ret = new ArrayList<>();
-        ret.add("immersivecombat.mixins.json");
-        return ret;
+        return null;
     }
 }

@@ -1,5 +1,7 @@
-package dev.tizwarp.immersivecombat.util;
+package dev.tizwarp.immersivecombat;
 
+import dev.tizwarp.immersivecombat.util.CommonProxy;
+import dev.tizwarp.immersivecombat.util.Reference;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
