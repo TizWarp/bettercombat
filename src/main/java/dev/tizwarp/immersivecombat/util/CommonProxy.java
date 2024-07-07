@@ -1,8 +1,12 @@
 package dev.tizwarp.immersivecombat.util;
 
 import com.cleanroommc.hackery.Reflection;
+import dev.tizwarp.immersivecombat.capabilities.IParrying;
+import dev.tizwarp.immersivecombat.capabilities.ParryingStorage;
+import dev.tizwarp.immersivecombat.capabilities.ParyyingCapability;
 import dev.tizwarp.immersivecombat.network.PacketHandler;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -23,6 +27,7 @@ public class CommonProxy
         
 		PacketHandler.registerMessages(Reference.MOD_ID);
 		SoundHandler.registerSounds();
+		CapabilityManager.INSTANCE.register(IParrying.class, new ParryingStorage(), ParyyingCapability::new);
 
 //		registerParticles();
 	}

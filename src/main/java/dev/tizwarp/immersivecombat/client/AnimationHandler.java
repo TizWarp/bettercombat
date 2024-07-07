@@ -11,6 +11,7 @@ import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderItem;
 import net.minecraft.client.renderer.block.model.ItemCameraTransforms;
+import net.minecraft.client.renderer.entity.RenderPlayer;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraft.entity.Entity;
 import net.minecraft.inventory.IInventory;
@@ -25,6 +26,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
+import net.minecraftforge.client.event.RenderHandEvent;
+import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.client.event.RenderSpecificHandEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.Event.Result;
@@ -120,165 +123,9 @@ public class AnimationHandler
     /*																CUSTOM RENDER 																*/
     /* ======================================================================================================================================== */
 
-	@SubscribeEvent
-	public void disableVanillaHandRender( RenderSpecificHandEvent event ) // -90, 120, -36 === -110, 116, -36
-	{
-		
-//		ClientProxy.EHC_INSTANCE.mc.player.hurtTime = 0; // event.getPartialTicks(); // TODO
-//		ClientProxy.EHC_INSTANCE.mc.player.maxHurtTime = 1000; // TODO
-//		ClientProxy.EHC_INSTANCE.mc.player.attackedAtYaw = 0;
-//		xx = (float)ClientProxy.EHC_INSTANCE.mc.player.posX;
-//		yy = (float)ClientProxy.EHC_INSTANCE.mc.player.posY - 50;
-//		zz = (float)ClientProxy.EHC_INSTANCE.mc.player.posZ;
-				
-		/* ItemRenderer */		
-		if ( event.getHand() == EnumHand.MAIN_HAND )
-        {
-			if ( ClientProxy.EHC_INSTANCE.mc.player.isSprinting() && this.equippedProgressMainhand != -1.0F && !this.isMainhandAttacking() )
-			{
-				if ( this.mainhandSprintingTimer < 20 )
-				{
-					this.mainhandSprintingTimer += 2;
-				}
-			}
-			else if ( this.mainhandSprintingTimer > 0 )
-			{
-				this.mainhandSprintingTimer -= 2;
-				
-				if ( this.mainhandSprintingTimer > 0 && this.isMainhandAttacking() )
-				{
-					this.mainhandSprintingTimer -= 2;
-				}
-			}
-			
-			if ( this.tooClose )
-			{
-				if ( this.tooCloseTimer < this.tooCloseAmount * 0.7F )
-				{
-					this.tooCloseTimer += 0.01F;
-				}
-				else if ( this.tooCloseTimer > this.tooCloseAmount * 1.3F )
-				{
-					this.tooCloseTimer -= 0.01F;
-				}
-			}
-			else
-			{
-				if ( this.tooCloseTimer > 0.0F )
-				{
-					this.tooCloseTimer -= 0.02F;
-				}
-				else
-				{
-					this.tooCloseTimer = 0.0F;
-				}
-			}
-			
-			if ( ClientProxy.EHC_INSTANCE.parrying )
-			{
-				if ( this.parryingAnimationTimer < 10 )
-				{
-					this.parryingAnimationTimer++;
-				}
-			}
-			else
-			{				
-				if ( this.parryingAnimationTimer > 0 )
-				{
-					this.parryingAnimationTimer--;
-				}
-			}
-			
-			if ( this.parriedTimer > 0 )
-			{
-				this.parriedTimer--;
-			}
-			
-			if ( ClientProxy.EHC_INSTANCE.betterCombatMainhand.hasCustomWeapon() )
-			{
-				/* If the MAINHAND is active */
-	    		if ( Helpers.isHandActive(ClientProxy.EHC_INSTANCE.mc.player, EnumHand.MAIN_HAND) )
-	    		{
-	    			/* Default rendering, such as bow, eat, or drink! */
-					this.positionBreathing();
-					return;
-	    		}
-	    		
-	    		this.customMainhandRender(event);
-				return;
-			}
-			else
-			{
-				/* Default rendering! */
-				this.positionBreathing();
-				return;
-			}
-        }
-		else if ( event.getHand() == EnumHand.OFF_HAND )
-        {
-			if ( ClientProxy.EHC_INSTANCE.mc.player.isSprinting() && this.equippedProgressOffhand != -1.0F && !this.isOffhandAttacking() )
-			{
-				if ( this.offhandSprintingTimer < 20 )
-				{
-					this.offhandSprintingTimer += 2;
-				}
-			}
-			else if ( this.offhandSprintingTimer > 0 )
-			{
-				this.offhandSprintingTimer -= 2;
-				
-				if ( this.offhandSprintingTimer > 0 && this.isOffhandAttacking() )
-				{
-					this.offhandSprintingTimer -= 2;
-				}
-			}
-			
-			/* If the OFFHAND OR MAINHAND has a TWOHAND, or the OFFHAND has a MAINHAND, */
-    		if ( ClientProxy.EHC_INSTANCE.betterCombatOffhand.getWeaponProperty() == ConfigurationHandler.WeaponProperty.TWOHAND || ClientProxy.EHC_INSTANCE.betterCombatMainhand.getWeaponProperty() == ConfigurationHandler.WeaponProperty.TWOHAND || ClientProxy.EHC_INSTANCE.betterCombatOffhand.getWeaponProperty() == ConfigurationHandler.WeaponProperty.MAINHAND )
-    		{
-    			/* Cancel all rendering! */
-    			event.setCanceled(true);
-    			event.setResult(Result.DENY);
-    			return;
-    		}
-    		else if ( ClientProxy.EHC_INSTANCE.betterCombatOffhand.hasCustomWeapon() )
-			{
-    			this.customOffhandRender(event);
-    			return;
-			}
-    		else if ( ClientProxy.EHC_INSTANCE.itemStackOffhand.getItem() instanceof ItemShield )
-    		{
-    	    	if ( Helpers.isHandActive(ClientProxy.EHC_INSTANCE.mc.player, EnumHand.OFF_HAND) && ( !ConfigurationHandler.disableBlockingWhileAttacking || ClientProxy.EHC_INSTANCE.isMainhandAttackReady() ) ) // && !this.isMainhandAttacking() && this.equippedProgressMainhand >= 0.0F )
-    			{
-					/* Block animation takes 10 frames (3.33 ticks) */
-					if ( this.blockingTimer < 10 )
-					{
-	    				// System.out.println("++");
-						this.blockingTimer++;
-					}
-        		}
-				else if ( this.blockingTimer > 0 )
-    			{
-    				// System.out.println("--");
-    				this.blockingTimer--;
-    			}
 
-    			/* Shield custom rendering! */
-    			this.customShieldRender(event);
-    			
-    			return;
-    		}
-    		else
-    		{
-    			this.blockingTimer = -1;
-    		}
 
-    		/* Default rendering! */
-			this.positionBreathing();
-			return;
-        }
-    }
-	
+
     private void positionBreathingShield()
     {
     	GlStateManager.translate(0.0F, MathHelper.sin(this.breatheTicks) * ConfigurationHandler.breathingAnimationIntensity, -this.tooCloseTimer*0.6F);
@@ -290,6 +137,7 @@ public class AnimationHandler
 
 	private void customMainhandRender( RenderSpecificHandEvent event )
 	{
+
 		event.setCanceled(true);
 		event.setResult(Result.DENY);
 		

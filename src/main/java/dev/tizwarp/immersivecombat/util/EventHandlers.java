@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import dev.tizwarp.immersivecombat.capabilities.IParrying;
+import dev.tizwarp.immersivecombat.capabilities.ParryingProvider;
 import dev.tizwarp.immersivecombat.client.ClientProxy;
 import dev.tizwarp.immersivecombat.enchantment.BetterCombatEnchantments;
 import dev.tizwarp.immersivecombat.enchantment.EnchantmentLightning;
@@ -51,6 +53,7 @@ import net.minecraft.potion.PotionUtils;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -59,6 +62,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
@@ -72,17 +76,21 @@ import net.minecraftforge.event.entity.living.PotionEvent.PotionApplicableEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.event.entity.player.PlayerSleepInBedEvent;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.fml.common.eventhandler.Cancelable;
 import net.minecraftforge.fml.common.eventhandler.Event.HasResult;
 import net.minecraftforge.fml.common.eventhandler.Event.Result;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import org.lwjgl.Sys;
 
 public class EventHandlers
 {
 	public static final IAttribute CRIT_CHANCE = (new RangedAttribute(null, Reference.MOD_ID + ".critChance", ConfigurationHandler.baseCritPercentChance, 0.0D, 1.0D)).setDescription("Critical strike chance").setShouldWatch(true);
 	public static final IAttribute CRIT_DAMAGE = (new RangedAttribute(null, Reference.MOD_ID + ".critDamage", ConfigurationHandler.baseCritPercentDamage, 0.0D, Double.MAX_VALUE)).setDescription("Critical strike damage").setShouldWatch(true);
+	public static final ResourceLocation PARRYING_CAP = new ResourceLocation(Reference.MOD_ID + "parrying");
+
 
 	public EventHandlers()
 	{
@@ -205,6 +213,19 @@ public class EventHandlers
 			{
 				ClientProxy.EHC_INSTANCE.checkItemstacksChanged(true);
 			}
+		}
+	}
+
+	@SubscribeEvent
+	public void onSleep(PlayerSleepInBedEvent event) {
+		System.out.println(event.getEntityPlayer().hasCapability(ParryingProvider.PARRYING_CAPABILITY, null));
+	}
+
+	@SubscribeEvent
+	public void attachCaps(AttachCapabilitiesEvent<Entity> event) {
+		if (event.getObject() instanceof EntityPlayer) {
+			System.out.println("Attaching to player");
+			event.addCapability(PARRYING_CAP, new ParryingProvider());
 		}
 	}
 	

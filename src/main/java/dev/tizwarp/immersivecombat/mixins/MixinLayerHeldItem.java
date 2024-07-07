@@ -1,6 +1,8 @@
 package dev.tizwarp.immersivecombat.mixins;
 
-
+import dev.tizwarp.immersivecombat.capabilities.IParrying;
+import dev.tizwarp.immersivecombat.capabilities.ParryingProvider;
+import dev.tizwarp.immersivecombat.util.Helpers;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.block.model.ItemCameraTransforms;
@@ -9,7 +11,7 @@ import net.minecraft.client.renderer.entity.layers.LayerHeldItem;
 import net.minecraft.client.renderer.entity.layers.LayerRenderer;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.*;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumHandSide;
 import net.minecraft.util.math.MathHelper;
@@ -34,7 +36,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class MixinLayerHeldItem implements LayerRenderer<EntityLivingBase> {
 
     @Shadow
-    abstract void translateToHand(EnumHandSide side);
+    protected abstract void translateToHand(EnumHandSide side);
 
     @Inject(at = @At("HEAD"),
             method = "Lnet/minecraft/client/renderer/entity/layers/LayerHeldItem;renderHeldItem("
@@ -43,21 +45,25 @@ public abstract class MixinLayerHeldItem implements LayerRenderer<EntityLivingBa
                     + "Lnet/minecraft/client/renderer/block/model/ItemCameraTransforms$TransformType;"
                     + "Lnet/minecraft/util/EnumHandSide;)V",
             cancellable = true)
+
     private void renderHeldItem(EntityLivingBase entityLivingBase, ItemStack stack, ItemCameraTransforms.TransformType transform, EnumHandSide handSide, CallbackInfo ci) {
 
         if (!stack.isEmpty()) {
-
-            if (entityLivingBase instanceof EntityPlayer && stack.getItem() instanceof Item) {
+            if (entityLivingBase instanceof EntityPlayer) {
+                System.out.println(entityLivingBase.getEntityData().getBoolean("isParrying"));
                 GlStateManager.pushMatrix();
                 boolean leftHand = handSide == EnumHandSide.LEFT;
                 if (entityLivingBase.isSneaking()) {
 
                     GlStateManager.translate(0.0F, 0.2F, 0.0F);
                 }
-
+                IParrying parrying = entityLivingBase.getCapability(ParryingProvider.PARRYING_CAPABILITY, null);
+                System.out.println(parrying.isParrying());
                 // Forge: moved this call down, fixes incorrect offset while sneaking.
                 translateToHand(handSide);
-                if (entityLivingBase.isHandActive() && entityLivingBase.getActiveHand() == (leftHand ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND)) {
+
+                if (parrying.isParrying()) {
+                    //System.out.println("He is fuckin blocking shit");
                     GlStateManager.translate((float) (leftHand ? 1 : -1) / 16.0F, 0.4375F, 0.0625F);
 
                     // blocking
@@ -83,7 +89,7 @@ public abstract class MixinLayerHeldItem implements LayerRenderer<EntityLivingBa
                     GlStateManager.rotate(180.0F, 0.0F, 1.0F, 0.0F);
                     GlStateManager.translate(0.0F, 0.0F, 0.28125F);
 
-                    applyTransformReverse(new ItemTransformVec3f(new Vector3f(0.0F, (leftHand ? 1 : -1) * 90.0F, (leftHand ? -1 : 1) * 55.0F), new Vector3f(0.0F, 0.25F, 0.03125F), new Vector3f(0.85F, 0.85F, 0.85F)), leftHand);
+                    bettercombat$applyTransformReverse(new ItemTransformVec3f(new Vector3f(0.0F, (leftHand ? 1 : -1) * 90.0F, (leftHand ? -1 : 1) * 55.0F), new Vector3f(0.0F, 0.25F, 0.03125F), new Vector3f(0.85F, 0.85F, 0.85F)), leftHand);
                 } else {
                     GlStateManager.rotate(-90.0F, 1.0F, 0.0F, 0.0F);
                     GlStateManager.rotate(180.0F, 0.0F, 1.0F, 0.0F);
@@ -98,7 +104,8 @@ public abstract class MixinLayerHeldItem implements LayerRenderer<EntityLivingBa
 
     }
 
-    private static void applyTransformReverse(net.minecraft.client.renderer.block.model.ItemTransformVec3f vec, boolean leftHand) {
+    @Unique
+    private static void bettercombat$applyTransformReverse(net.minecraft.client.renderer.block.model.ItemTransformVec3f vec, boolean leftHand) {
 
         if (vec != net.minecraft.client.renderer.block.model.ItemTransformVec3f.DEFAULT) {
 
@@ -114,13 +121,14 @@ public abstract class MixinLayerHeldItem implements LayerRenderer<EntityLivingBa
                 z = -z;
             }
 
-            Quaternion quat = makeQuaternion(x, y, z);
+            Quaternion quat = bettercombat$makeQuaternion(x, y, z);
             GlStateManager.rotate(quat.negate(quat));
             GlStateManager.translate((float) i * (-vec.translation.x), -vec.translation.y, -vec.translation.z);
         }
     }
 
-    private static Quaternion makeQuaternion(float p_188035_0_, float p_188035_1_, float p_188035_2_) {
+    @Unique
+    private static Quaternion bettercombat$makeQuaternion(float p_188035_0_, float p_188035_1_, float p_188035_2_) {
 
         float f = p_188035_0_ * 0.017453292F;
         float f1 = p_188035_1_ * 0.017453292F;
@@ -135,26 +143,27 @@ public abstract class MixinLayerHeldItem implements LayerRenderer<EntityLivingBa
         return new Quaternion(f3 * f6 * f8 + f4 * f5 * f7, f4 * f5 * f8 - f3 * f6 * f7, f3 * f5 * f8 + f4 * f6 * f7, f4 * f6 * f8 - f3 * f5 * f7);
     }
 
+    /*
     @Unique
     private void bettercombat$performCounterAttackAnimation(EntityPlayer player, ItemStack stack, boolean leftHand) {
         boolean hasParried = false;
         //Parry Animations
         if (player != null && !stack.isEmpty()) {
-            hasParried = true;//player.getEntityData().getBoolean("isParrying");
+            hasParried = ItemWeaponMFR.canCounter(player, stack) == 1;
         }
 
         if (hasParried) {
             Item item = stack.getItem();
-            if (item instanceof ItemAir) {
+            if (item instanceof ItemWaraxe) {
                 GlStateManager.rotate(180F, 0F, 0F, 1F);
                 GlStateManager.translate(leftHand ? -0.1F : 0.1F, -1.1F, 0F);
             }
-            else if (item instanceof Item && !(item instanceof ItemAppleGold)) {
+            else if (item instanceof ItemSpear && !(item instanceof ItemHalbeard)) {
                 GlStateManager.translate(leftHand ? 0.1F : -0.1F, 0.1F, leftHand ? -0.5F : -0.4F);
                 GlStateManager.rotate((leftHand ? -1F : 1F) * -50.0F, 0.0F, 1.0F, 0.0F);
                 GlStateManager.rotate(-25.0F, 1.0F, 0.0F, 0.0F);
                 GlStateManager.rotate((leftHand ? -1F : 1F) * -60.0F, 0.0F, 0.0F, 1.0F);
-            }/*
+            }
             else if (item instanceof ItemHeavyWeapon) {
                 if (item instanceof ItemKatana) {
                     GlStateManager.rotate(180, 1F, 0F, 0F);
@@ -173,10 +182,7 @@ public abstract class MixinLayerHeldItem implements LayerRenderer<EntityLivingBa
                 GlStateManager.rotate(80, 1F, 0F, 0F);
                 GlStateManager.translate(0F, -0.4F, -0.4F);
             }
-
-            */
         }
-
     }
-
+    */
 }

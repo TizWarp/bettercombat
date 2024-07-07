@@ -1,5 +1,7 @@
 package dev.tizwarp.immersivecombat.network;
 
+import dev.tizwarp.immersivecombat.capabilities.IParrying;
+import dev.tizwarp.immersivecombat.capabilities.ParryingProvider;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -8,6 +10,7 @@ import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+import org.lwjgl.Sys;
 
 public class PacketParrying implements IMessage
 {
@@ -69,10 +72,15 @@ public class PacketParrying implements IMessage
 			{
 				player.setActiveHand(EnumHand.MAIN_HAND);
 				player.getEntityData().setBoolean("isParrying", true);
+				IParrying parrying = player.getCapability(ParryingProvider.PARRYING_CAPABILITY, null);
+				parrying.setParrying(true);
+				System.out.println("I am now parrying");
 			}
 			else
 			{
 				player.stopActiveHand();
+				IParrying parrying = player.getCapability(ParryingProvider.PARRYING_CAPABILITY, null);
+				parrying.setParrying(false);
 				player.getEntityData().setBoolean("isParrying", false);
 			}
 		}

@@ -1,16 +1,11 @@
 {
   "required": true,
   "package": "dev.tizwarp.immersivecombat.mixins",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
   "refmap": "mixins.immersivecombat.refmap.json",
   "plugin": "dev.tizwarp.immersivecombat.core.MixinPlugin",
-  "mixins": [
-  ],
   "client": [
     "MixinLayerHeldItem"
-  ],
-  "injectors": {
-    "maxShiftBy": 10
-  }
+  ]
 }
